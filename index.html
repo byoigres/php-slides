@@ -57,10 +57,46 @@ URL: https://code.google.com/p/io-2012-slides
 
   <slide>
     <hgroup>
-      <h2>PHP</h2>
+      <h2>Caracteristicas</h2>
     </hgroup>
     <article>
-      
+      <ul class="build">
+        <li>PHP es un lenguaje de programaci&oacute;n de c&oacute;digo abierto del lado del servidor.</li>
+        <li>
+          En un inicio PHP representaba <b>Personal Home Page</b>, hoy en dia es el acr&oacute;nimo recursivo <i>PHP: Hypertext Preprocessor.</i>
+        </li>
+        <li>PHP puede combinar c&oacute;digo de PHP y HTML en un mismo archivo.</li>
+        <li>La extensi&oacute;n de los archivos es <b>.php</b></li>
+        <li class="flexbox vcenter">
+          <img src="images/php-elephant.png">
+          <img src="images/php-elephant-letters.png">
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Etiquetas de PHP</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+&lt;p&gt;1.- Hello
+  <b>&lt;php?</b>
+    echo " world!";
+    $variable = "2.- Hello PHP";
+  <b>?&gt;</b>
+&lt;/p&gt;
+&lt;br&gt;
+<b>&lt;?</b> echo $variable; <b>?&gt;</b> &lt;!-- Con short_open_tag habilitado --&gt;
+&lt;br&gt;
+<b>&lt;?=</b> $variable <b>?&gt;</b> &lt;!-- Forma abreviada de echo (v5.4+) --&gt;
+      </pre>
+      <pre class="prettyprint" data-lang="html">
+1.- Hello world!
+2.- Hello PHP
+2.- Hello PHP
+<pre/>
     </article>
   </slide>
 
