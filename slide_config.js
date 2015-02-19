@@ -1,8 +1,8 @@
 var SLIDE_CONFIG = {
   // Slide settings
   settings: {
-    title: 'Title Goes Here<br>Up To Two Lines',
-    subtitle: 'Subtitle Goes Here',
+    title: 'PHP',
+    subtitle: 'Framework y Carrito de Compras',
     //eventInfo: {
     //  title: 'Google I/O',
     //  date: '6/x/2013'
@@ -17,17 +17,17 @@ var SLIDE_CONFIG = {
       'Open Sans:regular,semibold,italic,italicsemibold',
       'Source Code Pro'
     ],
-    //theme: ['mytheme'], // Add your own custom themes or styles in /theme/css. Leave off the .css extension.
+    theme: ['php'], // Add your own custom themes or styles in /theme/css. Leave off the .css extension.
   },
 
   // Author information
   presenters: [{
-    name: 'Firstname Lastname',
-    company: 'Job Title<br>Google',
-    gplus: 'http://plus.google.com/1234567890',
-    twitter: '@yourhandle',
-    www: 'http://www.you.com',
-    github: 'http://github.com/you'
+    name: 'Sergio Flores',
+    company: 'Arquitecto de Software<br>Optimizaci&oacute;n de C&oacute;digo',
+    gplus: 'http://google.com/+SergioFlores',
+    twitter: '@byoigres',
+    www: 'http://byoigres.com',
+    github: 'http://github.com/byoigres'
   }/*, {
     name: 'Second Name',
     company: 'Job Title, Google',
@@ -37,4 +37,3 @@ var SLIDE_CONFIG = {
     github: 'http://github.com/you'
   }*/]
 };
-
