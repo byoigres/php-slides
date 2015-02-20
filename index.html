@@ -204,6 +204,118 @@ if (<b>php_sapi_name() == 'cli-server'</b>) {
     </article>
   </slide>
 
+  <slide>
+    <hgroup>
+      <h2>Carrito de Compras</h2>
+      <h3></h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint">
+        +- <b>shoppingcart</b>
+        |  +- api
+        |  |  +- controllers
+        |  |  +- models
+        |  +- assets
+        |  |  +- css
+        |  |  +- fonts
+        |  |  +- icons
+        |  |  +- images
+        |  |  +- js
+        |  +- config
+        |  +- views
+        |  - index.php
+        +- <b>framework</b>
+        |  +- config
+        |     +- Config.php
+        |  +- lib
+        |     +- Autoloader.php
+        |     +- BaseController.php
+        |     +- BaseModel.php
+        |     +- Helpers.php
+        |     +- Router.php
+        +- Framework.php
+      </pre>
+
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Incluir contenido de otros archivos</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>
+          <b>include:</b> incluye y evalua el contenido del archivo especificado. Si ocurre un error
+          con el archivo a incluir o este no existe PHP emitir&aacute; un <b>warning</b> y el flujo
+          del archivo continuar&aacute;.
+        </li>
+        <li>
+          <b>require:</b> al igual que <b>include</b> el contenido del archivo se incluye y evalua,
+          pero con la diferencia de que require emitir&aacute; un <b>error fatal</b>. si
+          ocurre un error en el archivo o este no existe y el flujo del archivo se detendr&aacute;.
+        </li>
+        <li>
+          <b>include_once/require_once:</b> son lo mismo que include y require pero con la diferencia
+          de que si el c&oacute;digo del archivo ya est&aacute; incluido no lo incluir&aacute; nuevamente.
+        </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Asignar el objecto de retorno de include/require a una variable</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php # message.php
+
+$message = "Hello, I'm a variable inside a external file :)";
+
+return $message;
+      </pre>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php # print_message.php
+
+$message_from_file = require_once('message.php');
+
+echo "I am a text in this file\n";
+
+echo $message_from_file;
+
+      </pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Clases</h2>
+    </hgroup>
+    <article>
+
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+
+class MyClase { # Nombre de la clase
+
+  private $miVariable; # Atributo privado;
+  public $miVariable; # Atributo p&uacute;blico;
+
+  public function __construct() { # Constructor de la clase
+
+  }
+
+  public function __destruct() { # Destructor de la clase
+
+  }
+
+}
+      </pre>
+
+    </article>
+  </slide>
+
   <slide class="backdrop"></slide>
 
 </slides>
