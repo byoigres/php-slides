@@ -241,6 +241,78 @@ if (<b>php_sapi_name() == 'cli-server'</b>) {
 
   <slide>
     <hgroup>
+      <h2>Constanstes predefinidas de PHP</h2>
+    </hgroup>
+    <article>
+      La siguiente lista de constanstes son variables ya que su valor cambia dependiento
+      de donde se utilizen.
+      <table>
+        <thead>
+          <th>
+            Nombre
+          </th>
+          <th>
+            Descripci&oacute;n
+          </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              __LINE__
+            </td>
+            <td>
+              El n&uacute;mero de linea actual del archivo.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              __FILE__
+            </td>
+            <td>
+              Nombre del archivo actual, si se utiliza con include
+              contendr&aacute; el nombre del archivo incluido.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              __DIR__
+            </td>
+            <td>
+              Nombre del directorio del archivo actual-
+            </td>
+          </tr>
+          <tr>
+            <td>
+              __FUNCTION__
+            </td>
+            <td>
+              Nombre de la funci&oacute;n actual.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              __CLASS__
+            </td>
+            <td>
+              Nonbre de la clase actual.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              __METHOD__
+            </td>
+            <td>
+              Nombre de la clase y funci&oacute;n actual.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
       <h2>Incluir contenido de otros archivos</h2>
     </hgroup>
     <article>
