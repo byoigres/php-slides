@@ -206,44 +206,9 @@ if (<b>php_sapi_name() == 'cli-server'</b>) {
 
   <slide>
     <hgroup>
-      <h2>Carrito de Compras</h2>
-      <h3></h3>
+      <h2>Constantes predefinidas de PHP</h2>
     </hgroup>
     <article class="smaller">
-      <pre class="prettyprint">
-        +- <b>shoppingcart</b>
-        |  +- api
-        |  |  +- controllers
-        |  |  +- models
-        |  +- assets
-        |  |  +- css
-        |  |  +- fonts
-        |  |  +- icons
-        |  |  +- images
-        |  |  +- js
-        |  +- config
-        |  +- views
-        |  - index.php
-        +- <b>framework</b>
-        |  +- config
-        |     +- Config.php
-        |  +- lib
-        |     +- Autoloader.php
-        |     +- BaseController.php
-        |     +- BaseModel.php
-        |     +- Helpers.php
-        |     +- Router.php
-        +- Framework.php
-      </pre>
-
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Constanstes predefinidas de PHP</h2>
-    </hgroup>
-    <article>
       La siguiente lista de constanstes son variables ya que su valor cambia dependiento
       de donde se utilizen.
       <table>
@@ -307,8 +272,68 @@ if (<b>php_sapi_name() == 'cli-server'</b>) {
           </tr>
         </tbody>
       </table>
-
     </article>
+    <footer class="source"><b>Ejemplos:</b> examples/constants-predefined/index.php</footer>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Concatenaci&oacute;n de strings</h2>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+
+$b = "Hello\n"; # Hello[LF]
+
+$c = 'world\n'; # world\n
+
+$d = "$b$c\n"; # Hello[LF]world\n[LF]
+
+class Test {
+  public $getValue = "I'm a property";
+  public function getValue() { return "I'm a method"; }
+}
+
+$t = new Test();
+
+$e = "Value: $t->getValue()"; # Value: I'm a property()
+
+$f = "Value: {$t->getValue()}\n"; # Value: I'm a method
+
+echo $b . $c; # Hello[LF]world\n
+      </pre>
+    </article>
+    <footer class="source"><b>Ejemplos:</b> examples/strings/index.php</footer>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Arreglos</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+
+$a = Array(
+  'hello',
+  'world'
+);
+
+$b = array(
+  'birthday' => '1987/01/28',
+  'gender' => 'male'
+);
+
+$c = [ # 5.4+
+  'name' => 'Sergio',
+  'last-name' => 'Flores'
+];
+      </pre>
+    </article>
+    <footer class="source"><b>Ejemplos:</b> examples/arrays/index.php</footer>
   </slide>
 
   <slide>
@@ -333,6 +358,11 @@ if (<b>php_sapi_name() == 'cli-server'</b>) {
         </li>
       </ul>
     </article>
+    <footer class="source">
+      <b>Ejemplos:</b><br>
+      examples/include-require/include.php<br>
+      examples/include-require/require.php
+    </footer>
   </slide>
 
   <slide>
@@ -358,6 +388,7 @@ echo $message_from_file;
 
       </pre>
     </article>
+    <footer class="source"><b>Ejemplos:</b> examples/include-require/print_message.php</footer>
   </slide>
 
   <slide>
@@ -383,6 +414,41 @@ class MyClase { # Nombre de la clase
   }
 
 }
+      </pre>
+
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Carrito de Compras</h2>
+      <h3></h3>
+    </hgroup>
+    <article class="smaller">
+      <pre class="prettyprint">
+        +- <b>shoppingcart</b>
+        |  +- api
+        |  |  +- controllers
+        |  |  +- models
+        |  +- assets
+        |  |  +- css
+        |  |  +- fonts
+        |  |  +- icons
+        |  |  +- images
+        |  |  +- js
+        |  +- config
+        |  +- views
+        |  - index.php
+        +- <b>framework</b>
+        |  +- config
+        |     +- Config.php
+        |  +- lib
+        |     +- Autoloader.php
+        |     +- BaseController.php
+        |     +- BaseModel.php
+        |     +- Helpers.php
+        |     +- Router.php
+        +- Framework.php
       </pre>
 
     </article>
