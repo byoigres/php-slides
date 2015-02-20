@@ -124,6 +124,69 @@ URL: https://code.google.com/p/io-2012-slides
     </article>
   </slide>
 
+  <slide>
+    <hgroup>
+      <h2>Built-in Web Server</h2>
+      <h3>Ejecutando el servidor integrado</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="LINUX">
+        $ cd my_awesome_project
+        $ php -S localhost:8080
+      </pre>
+
+      <pre class="prettyprint" data-lang="windows">
+        $ cd my_awesome_project
+        $ c:\xampp\php\php.exe -S localhost:8080
+      </pre>
+
+      <pre class="prettyprint" data-lang="linux">
+        $ php -S localhost:8080 -t /home/sergio/projects/my_awesome_project
+      </pre>
+
+      <pre class="prettyprint" data-lang="windows">
+        $ php.exe -S localhost:8080 -t c:\projects/my_awesome_project
+      </pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Built-in Web Server</h2>
+      <h3>Ruteo de contenido est&aacute;tico</h3>
+    </hgroup>
+    <article>
+      <p>
+        Para utilizar un sript de ruteo en el desarrollo con el CLI Web Server
+        que sea funcional en producción podemos utilizar la funcion
+        <b>php_sapi_name()</b> que nos regresa el tipo de interfaz en la que se
+        est&aacute; ejecutando PHP.
+      </p>
+
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+// router.php
+if (<b>php_sapi_name() == 'cli-server'</b>) {
+    /* rutear contenido est&aacute;tico y retornar false */
+}
+/* continuar con el flujo normal del archivo .php */
+?&gt;
+      </pre>
+
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Built-in Web Server</h2>
+      <h3>Ruteo de url</h3>
+    </hgroup>
+    <article>
+
+    </article>
+  </slide>
+
 
   <slide class="backdrop"></slide>
 
