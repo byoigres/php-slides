@@ -136,8 +136,8 @@ URL: https://code.google.com/p/io-2012-slides
       </pre>
 
       <pre class="prettyprint" data-lang="windows">
-        $ cd my_awesome_project
-        $ c:\xampp\php\php.exe -S localhost:8080
+        > cd my_awesome_project
+        > c:\xampp\php\php.exe -S localhost:8080
       </pre>
 
       <pre class="prettyprint" data-lang="linux">
@@ -145,7 +145,7 @@ URL: https://code.google.com/p/io-2012-slides
       </pre>
 
       <pre class="prettyprint" data-lang="windows">
-        $ php.exe -S localhost:8080 -t c:\projects/my_awesome_project
+        > php.exe -S localhost:8080 -t c:\projects/my_awesome_project
       </pre>
     </article>
   </slide>
@@ -157,7 +157,7 @@ URL: https://code.google.com/p/io-2012-slides
     </hgroup>
     <article>
       <p>
-        Para utilizar un sript de ruteo en el desarrollo con el CLI Web Server
+        Para utilizar un script de ruteo en el desarrollo con el CLI Web Server
         que sea funcional en producción podemos utilizar la funcion
         <b>php_sapi_name()</b> que nos regresa el tipo de interfaz en la que se
         est&aacute; ejecutando PHP.
@@ -180,13 +180,29 @@ if (<b>php_sapi_name() == 'cli-server'</b>) {
   <slide>
     <hgroup>
       <h2>Built-in Web Server</h2>
-      <h3>Ruteo de url</h3>
+      <h3>Simulando un sitio web</h3>
     </hgroup>
     <article>
+      <p>
+        Con ayuda de los archivos <b>host</b> y el <b>servidor
+        integrado</b> tanto en linux como en windows podemos simular el
+        est&aacute;r trabajando con una p&aacute;gina .com.
+      </p>
+      <pre class="prettyprint" data-lang="windows">
+# C:\Windows\System32\drivers\etc\host
 
+# localhost name resolution is handled within DNS itself.
+127.0.0.1       localhost
+127.0.0.1       mipagina.com
+      </pre>
+      <pre class="prettyprint" data-lang="windows">
+> php.exe -S mipagina.com:80 -t C:\mipagina.com
+      </pre>
+      <p>
+        En el navegador ingresaremos a la direcci&oacute;n <b>http://mipagina.com</b>
+      </p>
     </article>
   </slide>
-
 
   <slide class="backdrop"></slide>
 
